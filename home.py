@@ -26,6 +26,6 @@ st.header(title)
 if media_type == "video":
     st.video(media)
 else:
-    st.image(media, caption="caption here")
+    st.image(media)
 st.info(about_pic)
 st.write(f"Copyright: {copyright}")
