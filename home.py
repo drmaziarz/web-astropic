@@ -28,4 +28,5 @@ if media_type == "video":
 else:
     st.image(media)
 st.info(about_pic)
-st.write(f"Copyright: {copyright}")
+if copyright:
+    st.write(f"Copyright: {copyright}")
