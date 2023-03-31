@@ -12,7 +12,8 @@ media_type = content["media_type"]
 media = content["url"]
 date = content["date"]
 title = content["title"]
-copyright = content["copyright"]
+copyright = content.get("copyright")
+
 
 st.set_page_config(page_title="AstroPic",
                    page_icon="🌟",
@@ -28,5 +29,7 @@ if media_type == "video":
 else:
     st.image(media)
 st.info(about_pic)
-if copyright:
+if not copyright:
+    st.write("No copyright information found.")
+else:
     st.write(f"Copyright: {copyright}")
